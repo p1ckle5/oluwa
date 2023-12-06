@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+     (function(){
+  emailjs.init("-2CEp97acDICW0-qE");
+})();
+</script>
+
+<script>
+    function SendMail() {
+        var params = {
+            from_name : document.getElementById('fullname').value,
+            message : document.getElementById('message').value,
+
+        }
+        
+        emailjs.send('service_8tv4s0q', 'template_i76i7qd', params).then(function (res)  {
+            alert('CONGRATULATIONS!');
+        })
+    }
+</script>
+
+
+<script>
+    function SendMaill() {
+        var params = {
+            from_name : document.getElementById('fullnames').value,
+            message : document.getElementById('messages').value,
+
+        }
+        
+        emailjs.send('service_8tv4s0q', 'template_i76i7qd', params).then(function (res)  {
+            alert('OOOOPS!');
+        })
+    }
+</script>
+
+
+
+</head>
+<body>
+    <div class="home">
+        <div class="content">
+            
+            <p>Oluwafunbi <br>
+                You're the first thing on my mind when I open my eyes and the last thing i think about before 
+                I drift off to sleep. You make me feel more alive than I ever thought possible. Your brillance,
+                 radiant smile and charisma are one of a kind. You give beauty it's definition.<br>
+                Since you came into my life, it has never made more sense. I love you, I adore you and I look 
+                forward to making more memories wth you, My darling. I want to love and be loved by you<br>
+                <br>
+            
+            WILL YOU BE MY GIRLFRIEND? </p>
+        </div>
+
+        <div class="button">
+            <div class="btn" onclick="SendMail()">
+                <a href="./index1.html" >YES</a>
+            </div>
+            <div class="btnn" onclick="SendMaill()">
+                <a href="#">NO</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div style="display:none;">
+        <input type="text" placeholder=" name" id="fullname" value="Oluwafumbi">
+        <input type="text" name="" id="message" value="She Said YES">
+        </div>
+    </div>
+
+    <div>
+        <div style="display:none;">
+        <input type="text" placeholder=" name" id="fullnames" value="Oluwafumbi">
+        <input type="text" name="" id="messages" value="She Said NO">
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
