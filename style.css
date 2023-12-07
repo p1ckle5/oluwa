@@ -52,7 +52,7 @@ body{
     width: 100%;
     text-align: center;
 }
-.button{
+#button{
     display: flex;
     height: 20%;
     width: 100vw;
